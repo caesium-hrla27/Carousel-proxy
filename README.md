@@ -1,2 +1,2 @@
 # Jennifer-proxy
-Proxy server for the carousel module.
+Proxy server for fetching all applications and loading onto one HTML document.
