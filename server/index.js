@@ -5,8 +5,6 @@ const path = require('path');
 const app = express();
 const routes = require('./routes.js');
 
-
-
 const PORT = 3000;
 
 app.use(morgan('dev'));
