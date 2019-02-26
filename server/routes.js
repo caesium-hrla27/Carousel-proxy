@@ -100,8 +100,9 @@ router
     const { id } = req.query;
 
     axios
-      .get('http://ec2-54-193-33-71.us-west-1.compute.amazonaws.com:3003/api/product-detail', {params: {id}})
+      .get(`http://ec2-54-193-33-71.us-west-1.compute.amazonaws.com:3003/api/product-detail/${id}`, {params: {id}})
       .then(details => {
+        console.log('details', details.data)
         res.status(200).send(details.data)
       })
       .catch(err => {
