@@ -9,7 +9,7 @@ router
     const { shoe_id } = req.query;
     
     axios
-      .get('http://localhost:3002/api/getinfo', {params: {shoe_id}})
+      .get('http://ec2-52-14-78-34.us-east-2.compute.amazonaws.com:3002/api/getinfo', {params: {shoe_id}})
       .then(info => {
         res.status(200).send(info.data)
       })
@@ -24,7 +24,7 @@ router
    const {shoe_id} = req.query;
 
     axios
-      .get("http://localhost:3002/api/getcolors", {params: {shoe_id}})
+      .get("http://ec2-52-14-78-34.us-east-2.compute.amazonaws.com:3002/api/getcolors", {params: {shoe_id}})
       .then(colors => {
         res.status(200).send(colors.data) 
       })
@@ -40,7 +40,7 @@ router
     const {shoe_id, color_id} = req.query;
     
     axios
-      .get("http://localhost:3002/api/getpictures", {params: {shoe_id, color_id}})
+      .get("http://ec2-52-14-78-34.us-east-2.compute.amazonaws.com:3002/api/getpictures", {params: {shoe_id, color_id}})
       .then(pictures => {
         res.status(200).send(pictures.data) 
       })
@@ -57,7 +57,7 @@ router
     const { productId } = req.query;
 
     axios
-      .get('http://localhost:3003/api/review/preview', {params: {productId}})
+      .get('http://ec2-54-193-33-71.us-west-1.compute.amazonaws.com:3003/api/review/preview', {params: {productId}})
       .then(previews => {
         res.status(200).send(previews.data)
       })
@@ -71,7 +71,7 @@ router
 
     axios
 
-      .get('http://localhost:3003/api/review/fullview')
+      .get('http://ec2-54-193-33-71.us-west-1.compute.amazonaws.com:3003/api/review/fullview')
       .then(views => {
         res.status(200).send(views.data)
       })
@@ -86,7 +86,7 @@ router
     const { id } = req.query;
 
     axios
-      .get('http://localhost:3003/api/review/count', {params: {id}})
+      .get('http://ec2-54-193-33-71.us-west-1.compute.amazonaws.com:3003/api/review/count', {params: {id}})
       .then(count => {
         res.status(200).send(count.data)
       })
@@ -100,7 +100,7 @@ router
     const { id } = req.query;
 
     axios
-      .get('http://localhost:3003/api/product-detail')
+      .get('http://ec2-54-193-33-71.us-west-1.compute.amazonaws.com:3003/api/product-detail')
       .then(details => {
         res.status(200).send(details.data)
       })
@@ -120,7 +120,7 @@ router
     const { category } = req.query;
 
     axios
-      .get('http://localhost:3004/api/shoeList', {params: { category }})
+      .get('http://ec2-18-219-43-149.us-east-2.compute.amazonaws.com:3004/api/shoeList', {params: { category }})
       .then(shoes => {
         res.status(200).send(shoes.data)
       })
