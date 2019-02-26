@@ -3,8 +3,16 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+#navBarId {
+  width: 101%;
+}
+
 #Recommendations {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+#bottomBarId {
+  width: 100%;
 }
 
